@@ -1,0 +1,84 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+
+/*--account-starts--*/
+.register {
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+
+.account{
+  padding:6em 0px;
+}
+.account-left h3 {
+  font-size: 1.7em;
+  color: #73b6e1;
+  margin: 0 0 0 0;
+  font-family: 'BreeSerif-Regular';
+}
+.account-top,.register-top{
+  text-align:center;
+}
+.account-main,.register-main{
+  margin-top:4%;
+}
+.account-bottom {
+  margin-top: 2.2em;
+}
+.account-left input[type="text"],.account-left input[type="password"] {
+  width: 90%;
+  margin: 0px;
+  color: #000;
+  background: none;
+  padding: 8px 10px;
+  outline: none;
+  border: 1px solid #000;
+  font-family: 'Lato-Regular';
+  font-size: 14px;
+  margin-bottom:20px;
+}
+.address {
+  margin-top: 10px;
+}
+.address.submit{
+  text-align: center;
+}
+.submit{
+  margin:0 0 0 1em;
+}
+.address a {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+  font-family: 'Lato-Regular';
+  margin-right: 20px;
+}
+.address input[type="submit"] {
+  background: #73B6E1;
+  color: #FFF;
+  font-size: 1em;
+  padding: 0.5em 1.2em;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  display: inline-block;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  font-family: 'Lato-Regular';
+}
+.address input[type="submit"]:hover {
+  background: #000;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+}
+.panel.panel-info.show {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+table-user-information, tbody, tr {
+  border-bottom: 1px solid #ddd;
+}
