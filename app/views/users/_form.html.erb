@@ -1,0 +1,18 @@
+<%= form_for @user do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="register-main">
+    <div class="col-md-6 account-left">
+      <%= f.text_field :name, placeholder: true, required: true %>
+      <%= f.text_field :email, placeholder: true, required: true %>
+      <%= f.text_field :phone, placeholder: true, required: true %>
+    </div>
+    <div class="col-md-6 account-left">
+      <%= f.password_field :password, placeholder: true, required: true %>
+      <%= f.password_field :password_confirmation, placeholder: true, required: true %>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+  <div class="address submit">
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+  </div>
+<% end %>

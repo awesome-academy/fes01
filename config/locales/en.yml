@@ -30,6 +30,62 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  layout:
+  layouts:
     application:
       title: "E learning"
+    header:
+      phone: "Phone:+128-546-6853"
+      e_learning: E learning
+      toggle: "Toggle navigation"
+      home: "Home"
+      category: "Categories"
+      words: "Words"
+      login: "LOG IN"
+      signup: "SIGN UP"
+    footer:
+      news: "NewsLetter"
+      news1: "Lorem ipsum dolor sit amet, tristique nec libero. Proin vitae convallis odio. Morbi nec enim nisi. Aliquam erat volutpat. "
+      feed: "Twitter Feed"
+      feed1: "Check out th best designs online in the world"
+      time1: "1 day ago"
+      feed2: "Twitter, may be the more visual platform for education group."
+      time2: "4 day ago"
+      follow: "Follow Us"
+      content_follow: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla in purus nibh. Donec ornare felis neque. Nullam tortor! "
+      coppyright: "© 2015 Literacy. All Rights Reserved"
+      home: "Home"
+      category: "Categories"
+      words: "Words"
+  helpers:
+    label:
+      user:
+        name: "Name"
+        email: "Email"
+        phone: "Phone"
+        password: "Password"
+        password_confirmation: "Confirmation"
+    placeholder:
+      user:
+        name: "Name"
+        email: "Email"
+        phone: "Phone"
+        password: "Password"
+        password_confirmation: "Confirmation"
+  shared:
+    form_error: "The form contains %{count_err}."
+    error:
+      one: "%{count} error"
+      other: "%{count} errors"
+  users:
+    load_user:
+      error_message: "User not found !"
+    new:
+      title: "Sign up"
+      sign_up: "Create my account"
+      confirm: "Confirmation"
+    create:
+      sign_up_succ: "Welcome to the E-learning!"
+    show:
+      email: "Email"
+      name: "Name"
+      phone: "Phone"

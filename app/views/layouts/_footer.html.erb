@@ -1,0 +1,47 @@
+  <div class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="col-md-4 footer-grid">
+          <h5><%= t("layouts.footer.news") %></h5>
+          <p><%= t("layouts.footer.news1") %></p>
+          <form>
+            <input type="text" class="text" value="Enter Email">
+            <input type="submit" value="Submit">
+            <div class="clearfix"></div>
+          </form>
+        </div>
+        <div class="col-md-4 footer-grid">
+          <h5><%= t("layouts.footer.feed") %></h5>
+          <p><%= t("layouts.footer.feed1") %></p>
+          <span><%= t("layouts.footer.time1") %></span>
+          <p><%= t("layouts.footer.feed2") %></p>
+          <span><%= t("layouts.footer.time2") %></span>
+        </div>
+        <div class="col-md-4 footer-grid">
+          <h5><%= t("layouts.footer.follow") %></h5>
+          <p><%= t("layouts.footer.content_follow") %></p>
+          <div class="social-icons footer-social-icons">
+            <%= link_to "", "#", class: "facebook" %>
+            <%= link_to "", "#", class: "twitter" %>
+            <%= link_to "", "#", class: "google-plus" %>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="copyrights text-center">
+          <p><%= t("layouts.footer.coppyright") %></p>
+        </div>
+        <div class="footer-nav">
+          <ul>
+            <li><a class="scroll" href="#movetop"><%= t("layouts.footer.home") %><span class="sr-only">(current)</span></a></li>
+            <li><%= link_to t("layouts.footer.category"), "#" %></li>
+            <li><%= link_to t("layouts.footer.words"), "#" %></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>

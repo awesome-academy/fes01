@@ -1,0 +1,43 @@
+  <div class="header" id="movetop">
+    <div class="container">
+      <div class="header-top">
+        <p class="sign_in"><b><%= link_to t("layouts.header.login"), "#" %>&ensp;|&ensp;<%= link_to t("layouts.header.signup"), signup_path %></b></p>
+        <div class="logo">
+          <h1><%= link_to t("layouts.header.e_learning"), "#" %></h1>
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li><%= link_to "", "#", class: "facebook" %></li>
+            <li><%= link_to "", "#", class: "twitter" %></li>
+            <li><%= link_to "", "#", class: "google-plus" %></li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="navigation">
+        <nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only"><%= t("layouts.header.toggle") %></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <%= link_to "#" do %>
+                  <%= t("layouts.header.home") %>
+                  <span class="sr-only">(current)</span></a>
+                <% end %>
+              </li>
+              <li><%= link_to t("layouts.header.category"),"#" %></li>
+              <li><%= link_to t("layouts.header.words"),"#" %></li>
+            </ul>
+            <div class="clearfix"></div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
