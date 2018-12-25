@@ -30,12 +30,28 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  sessions:
+    new:
+      title: "Login"
+      login: "LOG IN"
+      exits_user: "Existing User"
+      new_user: "New User? Create an Account"
+      content: "By creating an account with our store, you will be able to move through the checkout process faster,
+        store multiple shipping addresses, view and track your orders in your account and more."
+      create: "Create an Account"
+      remember_me: "Remember me"
+    create:
+      message_success: "Login Successful"
+      message_error: "Invalid email/password combination"
+      message_not_active: "Account not activated. Check your email for the activation link. "
+    destroy:
+      message_logout: "Logout Successful"
   layouts:
     application:
       title: "E learning"
     header:
       phone: "Phone:+128-546-6853"
-      e_learning: E learning
+      e_learning: "E learning"
       toggle: "Toggle navigation"
       home: "Home"
       category: "Categories"
@@ -65,6 +81,9 @@ en:
         password: "Password"
         password_confirmation: "Confirmation"
     placeholder:
+      session:
+        email: "Email"
+        password: "Password"
       user:
         name: "Name"
         email: "Email"
