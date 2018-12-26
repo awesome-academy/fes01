@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2018_12_24_085307) do
 
   create_table "answers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content"
-    t.boolean "is_correct"
+    t.boolean "is_correct", default: false
     t.integer "question_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -1,0 +1,20 @@
+<div class="list_excercise">
+<%= form_for @excercise do |form| %>
+  <div class="center">
+    <h1><%= form.object.lesson.name %></h1>
+  </div>
+  <div class="list-questions">
+    <ol>
+      <%= form.fields_for :detail_excercises do |question_build| %>
+        <li>
+          <strong><%= question_build.object.question.content %></strong>
+          <%= question_build.hidden_field :question_id %>
+          <%= question_build.collection_radio_buttons(:answer_id, question_build.object.question.answers, :id, :content) %>
+        </li>
+        <hr/>
+      <% end %>
+    </ol>
+    <%= form.submit t(".submit"), class: "btn btn-primary", id: "submit-test-lesson" %>
+  </div>
+<% end %>
+</div>
