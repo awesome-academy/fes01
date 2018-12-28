@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       log_in user
       flash[:success] = t ".message_success"
       check_remember user
-      redirect_to user
+      redirect_to store_location || user
     else
       flash.now[:danger] = t ".message_error"
       render :new
