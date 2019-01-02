@@ -1,0 +1,4 @@
+<%= form_for current_user.excercises.build, remote: true do |f| %>
+  <%= f.collection_select :lesson_id, @lessons, :id, :name, {prompt: t("excercises.new.please_choice")}, class: "lessons" %>
+  <%= f.submit t("excercises.new.create_btn"), class: "btn btn-primary create_btn" %>
+<% end %>

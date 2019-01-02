@@ -30,6 +30,28 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  excercises:
+    load_excercise:
+      error_message: "Excercise not found !"
+    excercise:
+      start: "Start"
+    new:
+      create_btn: "Create exercise"
+      title_new: "New excercise"
+      back_link: "Back to exercises"
+      please_choice: "Please select the lessons"
+    index:
+      list_exercise: "Your list of exercises"
+      date: "Date created"
+      lesson: "Lesson"
+      question_number: "Number of questions"
+      status: "Status"
+      result: "Result"
+      new_btn: "New excercise"
+    edit:
+      submit: "Finish"
+    update:
+      data_fail: "Save failed exercises"
   sessions:
     new:
       title: "Login"
@@ -96,6 +118,8 @@ en:
       one: "%{count} error"
       other: "%{count} errors"
   users:
+    logged_in_user:
+      pl_login: "Please login"
     load_user:
       error_message: "User not found !"
     new:

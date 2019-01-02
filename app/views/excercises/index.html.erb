@@ -1,0 +1,28 @@
+<div class="new-excercise">
+  <%= link_to t(".new_btn"), new_excercise_path, class: "btn btn-lg btn-primary", id: "new_link", remote: true %>
+</div>
+<section class="list_exercise">
+  <div class="container">
+    <div class="row">
+      <h1><%= t ".list_exercise" %></h1>
+      <table class="table table-bordered table-hover" id="exercises">
+        <thead>
+          <tr>
+            <th><%= t ".date" %></th>
+            <th><%= t ".lesson" %></th>
+            <th><%= t ".question_number" %></th>
+            <th><%= t ".status" %></th>
+            <th><%= t ".result" %></th>
+            <th><%= t ".start" %></th>
+          </tr>
+        </thead>
+        <tbody id="all_excercises">
+          <%= render partial: "excercise", collection: @excercises, as: :excercise %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="pag">
+    <%= will_paginate @excercises %>
+  </div>
+</section>
