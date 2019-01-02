@@ -1,0 +1,21 @@
+<% @questions.each do |q| %>
+  <tr class="row_custom">
+    <td class="cell_custom"><%= q.id %></td>
+    <td class="cell_custom"><%= q.lesson_id %></td>
+    <td class="cell_custom"><%= q.content %></td>
+    <td class="cell_custom"><%= q.answers.size %></td>
+    <td>
+    <%= link_to edit_admin_question_path(id: q.id), class: "btn-edit-category btn btn-warning" do %>
+      <%= t(".edit") %>
+      <span class="glyphicon glyphicon-edit"></span>
+    <% end %>
+  </td>
+  <td>
+    <%= link_to admin_question_path(id: q.id), method: :delete,
+      data:{confirm: t(".sure")}, class: "btn btn-danger" do %>
+       <%= t(".delete") %>
+      <span class="glyphicon glyphicon-trash"></span>
+    <% end %>
+  </td>
+  </tr>
+<% end %>

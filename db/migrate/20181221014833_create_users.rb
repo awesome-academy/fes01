@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :phone
       t.string :password_digest
       t.string :avatar
-      t.integer :role
+      t.integer :role, default: 0
 
       t.timestamps
     end

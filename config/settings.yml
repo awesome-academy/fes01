@@ -7,4 +7,5 @@ sessions:
   value_remember: "1"
 excercises:
   randum_numer : 2
+questions:
   pag_max: 10

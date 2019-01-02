@@ -8,6 +8,7 @@ class User < ApplicationRecord
   validates :name, presence: true, length: {maximum: Settings.user.name_length}
   validates :password, presence: true,
     length: {minimum: Settings.user.password_length}
+  enum role: {admin: 1, subscriber: 0}
   has_secure_password
   has_many :activities, dependent: :destroy
   has_many :active_relationships, class_name: Relationship.name,

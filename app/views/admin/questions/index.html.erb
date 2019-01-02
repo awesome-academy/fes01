@@ -1,0 +1,33 @@
+<% provide :title, t(".title") %>
+<% provide :table, t(".table_questions") %>
+<% provide :add, t(".add_question") %>
+
+<div class="container-fluid">
+  <div class="card mb-3">
+    <div class="card-header"><i class="fa fa-table"></i> <%= yield(:table) %></div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <div class="add_pd">
+          <%= link_to yield(:add), new_admin_question_path, class: "btn btn-primary" %>
+        </div>
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr class="row_custom header">
+              <th class="cell_custom"><%= t(".id") %></th>
+              <th class="cell_custom"><%= t(".lesson_id") %></th>
+              <th class="cell_custom"><%= t(".content") %></th>
+              <th class="cell_custom"><%= t(".number_answers") %></th>
+              <th colspan="2", class="cell_custom"><%= t(".action") %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "questions" %>
+          </tbody>
+        </table>
+        <div class="pag">
+          <%= will_paginate %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
