@@ -3,6 +3,7 @@ git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
 ruby "2.5.3"
 
+gem "ajax-datatables-rails"
 gem "bcrypt", "3.1.12"
 gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.3.7"
@@ -13,6 +14,7 @@ gem "faker", "1.7.3"
 gem "font-awesome-rails"
 gem "i18n"
 gem "jbuilder", "~> 2.5"
+gem "jquery-datatables-rails"
 gem "jquery-rails"
 gem "mini_magick", "4.7.0"
 gem "mysql2"

@@ -52,6 +52,41 @@ en:
       submit: "Finish"
     update:
       data_fail: "Save failed exercises"
+  admin:
+    questions:
+      index:
+        title: "Management questions"
+        id: "Id"
+        lesson_id: "Lesson id"
+        content: "content"
+        number_answers: "Number answers"
+        action: "Actions"
+        add_question: "Add question"
+        table_questions: Table questions
+      questions:
+        edit: "Edit"
+        delete: "Delete"
+        sure: "Are you sure?"
+      new:
+        title: "New question"
+        create: "Create question"
+        add: "Add"
+        back: "Back"
+      create:
+        create_success: "Create Success"
+        create_fail: "Create fail"
+      edit:
+        title: "Edit question"
+        back: "Back"
+        btn_save: "Save"
+      load_question:
+        not_found: "Question not found"
+      update:
+        update_success: "Update success"
+        update_fail: "Update fail"
+      destroy:
+        destroy_success: "Destroy sucsess"
+        destroy_fail: "Destroy fail"
   sessions:
     new:
       title: "Login"
@@ -69,6 +104,15 @@ en:
     destroy:
       message_logout: "Logout Successful"
   layouts:
+    admin:
+      header:
+        logo: "E learning"
+        questions: "Questions"
+        excercises: "Excercises"
+        logout: "Log out"
+        login: "Log in"
+      footer:
+        copyright: "Copyright © Your Website 2018"
     application:
       title: "E learning"
     header:
@@ -96,6 +140,11 @@ en:
       words: "Words"
   helpers:
     label:
+      question:
+        select: "Select"
+        content: "Content"
+        answers: "Answers"
+        is_correct: "Is correct"
       user:
         name: "Name"
         email: "Email"

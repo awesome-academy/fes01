@@ -46,4 +46,3 @@ lesson = Lesson.all
   content = Faker::Lorem.sentence(2)
   lesson.each { |less| less.questions.create!(content: content) }
 end
-

@@ -11,4 +11,9 @@ Rails.application.routes.draw do
   resources :lessons do
     resources :excercises, only: :edit
   end
+
+  namespace :admin do
+    root "questions#index"
+    resources :questions
+  end
 end
