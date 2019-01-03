@@ -4,7 +4,7 @@ class Admin::QuestionsController < AdminController
 
   def new
     @question = Question.new
-    @answerss = @question.answers.build
+    @answers = @question.answers.build
   end
 
   def create

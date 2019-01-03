@@ -30,11 +30,17 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  static_pages:
+    title: "Home"
+    elearning: "E-learning"
+    word_list: "Word list"
+    start_lessons: "Start lessons"
   excercises:
     load_excercise:
       error_message: "Excercise not found !"
     excercise:
       start: "Start"
+      view: "View"
     new:
       create_btn: "Create exercise"
       title_new: "New excercise"
@@ -124,6 +130,7 @@ en:
       words: "Words"
       login: "LOG IN"
       signup: "SIGN UP"
+      admin_page: "Admin page"
     footer:
       news: "NewsLetter"
       news1: "Lorem ipsum dolor sit amet, tristique nec libero. Proin vitae convallis odio. Morbi nec enim nisi. Aliquam erat volutpat. "

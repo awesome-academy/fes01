@@ -1,7 +1,8 @@
 class ExcercisesController < ApplicationController
   before_action :logged_in_user
   before_action :load_lessons, only: [:new, :create]
-  before_action :load_excercise, :load_answer_correct, only: [:edit, :update]
+  before_action :load_excercise, :load_answer_correct, only: [:edit,
+    :show, :update]
 
   def new
     @excercise = Excercise.new
@@ -66,6 +67,7 @@ class ExcercisesController < ApplicationController
   def load_answer_correct
     @answers_correct = {}
     @excercise.questions.each do |question|
+      next if question.answers.number.blank?
       @answers_correct[question.id] = question.answers.number.first.id
     end
   end

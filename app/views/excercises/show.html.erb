@@ -1,0 +1,21 @@
+<div class="list_excercise">
+  <div class="center">
+    <h1><%= @excercise.lesson.name %></h1>
+  </div>
+  <div class="list-questions">
+    <ol>
+      <% @excercise.detail_excercises.each do |e| %>
+        <li>
+          <strong><%= e.question.content %></strong>
+          <% e.question.answers.each do |a| %>
+            <div>
+              <%= radio_button_tag nil, nil, checked = (a.id== e.answer_id.to_i), disabled: true %>
+              <div class="text-content"><%= a.content %></div>
+            </div>
+          <% end %>
+        </li>
+        <hr/>
+      <% end %>
+    </ol>
+  </div>
+</div>
