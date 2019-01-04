@@ -5,4 +5,6 @@ class Question < ApplicationRecord
 
   scope :all_questons, ->(lesson_id){where lesson_id: lesson_id}
   scope :sort_by_created, ->{order created_at: :DESC}
+  scope :search_content,
+    ->(search){where("content LIKE ?", "%#{search}%") if search.present?}
 end
