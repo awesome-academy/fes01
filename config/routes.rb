@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    root "questions#index"
+    root "statistics#index"
     resources :questions
+    resources :statistics
   end
 end

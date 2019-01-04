@@ -59,6 +59,9 @@ en:
     update:
       data_fail: "Save failed exercises"
   admin:
+    statistics:
+      index:
+        title: "Statistics exercises"
     questions:
       index:
         title: "Management questions"
@@ -69,6 +72,7 @@ en:
         action: "Actions"
         add_question: "Add question"
         table_questions: Table questions
+        search: "Search"
       questions:
         edit: "Edit"
         delete: "Delete"

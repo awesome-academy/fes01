@@ -9,6 +9,12 @@
       <div class="table-responsive">
         <div class="add_pd">
           <%= link_to yield(:add), new_admin_question_path, class: "btn btn-primary" %>
+          <div class="search-bar">
+            <%= form_tag admin_questions_path, method: :get do %>
+              <%= text_field_tag :search, params[:search], placeholder: t(".search") %>
+              <%= submit_tag t(".search"), class: "form_submit" %>
+            <% end %>
+          </div>
         </div>
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
           <thead>
