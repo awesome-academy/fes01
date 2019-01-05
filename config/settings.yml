@@ -9,3 +9,5 @@ excercises:
   randum_numer : 2
 questions:
   pag_max: 10
+  format_csv: "csv"
+  format_xls: "xls"
