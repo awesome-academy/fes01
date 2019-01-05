@@ -1,0 +1,15 @@
+<%= form_for [:admin, @excercise] do |f| %>
+  <%= render "shared/error_messages", object: f.object %>
+  <div class="form-group">
+    <%= f.label :select_lesson %>
+    <%= f.collection_select :lesson_id, @lessons,
+      :id, :name, prompt: true, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :select_user %>
+    <%= f.collection_select :user_id, @users,
+      :id, :name, prompt: true, class: "form-control" %>
+  </div>
+  <br>
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

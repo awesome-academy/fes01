@@ -603,3 +603,19 @@ footer.sticky-footer {
 .container-chart h1 {
     text-align: center;
 }
+.radio-answer {
+  margin-left: 50%;
+  display: inline-block;
+}
+.text-content {
+  float: left;
+}
+.center {
+  text-align: center;
+}
+.answer_correct {
+  background: #6ae2252e;
+}
+.list-questions {
+  margin: 10px;
+}

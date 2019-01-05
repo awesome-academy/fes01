@@ -1,7 +1,7 @@
 <% @questions.each do |q| %>
   <tr class="row_custom">
     <td class="cell_custom"><%= q.id %></td>
-    <td class="cell_custom"><%= q.lesson_id %></td>
+    <td class="cell_custom"><%= find_lesson(q.lesson_id) %></td>
     <td class="cell_custom"><%= q.content %></td>
     <td class="cell_custom"><%= q.answers.size %></td>
     <td>

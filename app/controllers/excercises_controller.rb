@@ -6,6 +6,10 @@ class ExcercisesController < ApplicationController
 
   def new
     @excercise = Excercise.new
+    respond_to do |form|
+      form.html
+      form.js
+    end
   end
 
   def create
@@ -21,9 +25,14 @@ class ExcercisesController < ApplicationController
   end
 
   def index
-    @excercises = current_user.excercises.sort_by_created.paginate(
-      page: params[:page], per_page: Settings.excercises.pag_max
-    )
+    @excercises = current_user.excercises.sort_by_updated
+
+    @excercises = if params[:search].present?
+                    @excercises.search_name_lesson(params[:search])
+                  else
+                    @excercises
+                  end.paginate page: params[:page],
+                    per_page: Settings.excercises.pag_max
   end
 
   def show; end
@@ -92,11 +101,6 @@ class ExcercisesController < ApplicationController
       flash[:danger] = t ".error_message"
       redirect_to root_url
     end
-  end
-
-  def load_questions lesson_id
-    rand_questons = Question.all_questons(lesson_id).order("RAND()")
-    @questions = rand_questons.limit(Settings.excercises.randum_numer)
   end
 
   def excercise_params

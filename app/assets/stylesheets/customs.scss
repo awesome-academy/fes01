@@ -4,10 +4,14 @@ section.list_exercise {
 }
 .new-excercise {
   margin-top: 5%;
-  text-align: center;
+  margin: 20px 0;
 }
-.new_excercise {
-    margin: 20px 0;
+.search-bar-excercise {
+  float: right;
+}
+.search-excercise{
+  height: 50px;
+  width: 300px;
 }
 .lessons {
   width: 20%;
@@ -43,4 +47,7 @@ input {
   h1 {
     margin-bottom: 15px;
   }
+}
+.answer_correct {
+  background: #6ae2252e;
 }

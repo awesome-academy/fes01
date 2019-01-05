@@ -6,14 +6,14 @@
     <ol>
       <% @excercise.detail_excercises.each do |e| %>
         <li>
-          <strong class="questions"><%= e.question.content %></strong>
+          <strong><%= e.question.content %></strong>
           <% e.question.answers.each do |a| %>
           <% if a.is_correct %>
-            <div class="answer_correct">
+            <div class="answers answer_correct">
           <% else %>
-            <div>
+            <div class="answers">
           <% end %>
-              <%= radio_button_tag nil, nil, checked = (a.id== e.answer_id.to_i), disabled: true %>
+              <%= radio_button_tag nil, nil, checked = (a.id== e.answer_id.to_i), class: "radio-answer", disabled: true %>
               <div class="text-content"><%= a.content %></div>
             </div>
           <% end %>

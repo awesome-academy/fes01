@@ -14,7 +14,7 @@ User.create!(name: "admin",
 
 User.create!(name: "lethibe",
             phone: "1234567890",
-            email: "be1@gmail.com",
+            email: "15i1lethibe@gmail.com",
             password: "123456",
             password_confirmation: "123456",
             role: 1)
@@ -36,13 +36,25 @@ end
 end
 
 cat = Category.order(:created_at).take(5)
+
 1.times do |n|
-  name  = "lesson#{n+1}"
-  cat.each { |category| category.lessons.create!(name: name, number_questions: "20") }
+  name  = "lesson"
+  cat.each { |category| category.lessons.create!(name: name+"#{category.id}", number_questions: "20") }
 end
 
 lesson = Lesson.all
-2.times do |n|
+4.times do |n|
   content = Faker::Lorem.sentence(2)
   lesson.each { |less| less.questions.create!(content: content) }
+end
+
+question = Question.all
+3.times do |n|
+  content = "answer#{n+1}"
+  question.each { |q| q.answers.create!(content: content) }
+end
+1.times do |n|
+  content = "answer correct"
+  is_correct = true
+  question.each { |q| q.answers.create!(content: content, is_correct: is_correct) }
 end

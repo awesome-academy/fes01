@@ -1,0 +1,40 @@
+<% provide :title, t(".title") %>
+<% provide :table, t(".table_excercises") %>
+<% provide :add, t(".add_excercise") %>
+
+<div class="container-fluid">
+  <div class="card mb-3">
+    <div class="card-header"><i class="fa fa-table"></i> <%= yield(:table) %></div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <div class="add_pd">
+          <div class="search-bar">
+            <%= form_tag admin_excercises_path, method: :get do %>
+              <%= text_field_tag :search, params[:search], placeholder: t(".search") %>
+              <%= submit_tag t(".search"), class: "form_submit" %>
+            <% end %>
+          </div>
+        </div>
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr class="row_custom header">
+              <th class="cell_custom"><%= t(".id") %></th>
+              <th class="cell_custom"><%= t(".lesson_id") %></th>
+              <th class="cell_custom"><%= t(".user_id") %></th>
+              <th class="cell_custom"><%= t(".question_number") %></th>
+              <th class="cell_custom"><%= t(".result") %></th>
+              <th class="cell_custom"><%= t(".created_at") %></th>
+              <th colspan="2", class="cell_custom"><%= t(".action") %></th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render "excercises" %>
+          </tbody>
+        </table>
+        <div class="pag">
+          <%= will_paginate @excercises %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
