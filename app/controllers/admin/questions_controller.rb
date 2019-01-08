@@ -22,6 +22,11 @@ class Admin::QuestionsController < AdminController
     @search_questions = Question.sort_by_created.search_content(params[:search])
     @questions = @search_questions.paginate page: params[:page],
       per_page: Settings.questions.pag_max
+    respond_to do |format|
+      format.html
+      format.csv{send_data @questions.to_csv}
+      format.xls{send_data @questions.to_xls}
+    end
   end
 
   def edit; end

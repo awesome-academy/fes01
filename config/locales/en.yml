@@ -30,6 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    errors:
+      models:
+        question:
+          required: "must exist"
   static_pages:
     title: "Home"
     elearning: "E-learning"
@@ -59,6 +64,9 @@ en:
     update:
       data_fail: "Save failed exercises"
   admin:
+    csv:
+      create:
+        note_import: "Question imported"
     statistics:
       index:
         title: "Statistics exercises"
@@ -73,6 +81,10 @@ en:
         add_question: "Add question"
         table_questions: Table questions
         search: "Search"
+        csv: "CSV"
+        download: "Download:"
+        excel: "Excel"
+        import: "Import"
       questions:
         edit: "Edit"
         delete: "Delete"

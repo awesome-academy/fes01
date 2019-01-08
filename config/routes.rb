@@ -16,5 +16,6 @@ Rails.application.routes.draw do
     root "statistics#index"
     resources :questions
     resources :statistics
+    resources :csv, only: :create
   end
 end

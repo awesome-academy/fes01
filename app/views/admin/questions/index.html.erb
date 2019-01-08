@@ -36,4 +36,15 @@
       </div>
     </div>
   </div>
+  <div class="container">
+    <p>
+      <%= t(".download") %>
+      <%= link_to t(".csv"), admin_questions_path(format: Settings.questions.format_csv) %> |
+      <%= link_to t(".excel"), admin_questions_path(format: Settings.questions.format_xls) %>
+    </p>
+  </div>
+  <%= form_tag admin_csv_index_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag t(".import") %>
+  <% end %>
 </div>
