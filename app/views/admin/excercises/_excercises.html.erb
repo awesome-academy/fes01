@@ -1,0 +1,27 @@
+<% @excercises.each do |e| %>
+  <tr class="row_custom">
+    <td class="cell_custom"><%= e.id %></td>
+    <td class="cell_custom"><%= e.lesson_id %> - <%= find_lesson(e.lesson_id) %></td>
+    <td class="cell_custom"><%= e.user_id %> - <%= find_user(e.user_id) %></td>
+    <td class="cell_custom"><%= e.questions.count %></td>
+    <% if e.result.blank? %>
+      <td class="cell_custom"><%= e.result %></td>
+    <% else %>
+      <td class="cell_custom"><%= e.result %>/<%= e.questions.count %></td>
+    <% end %>
+    <td class="cell_custom"><%= e.created_at %></td>
+    <td>
+    <%= link_to admin_excercise_path(id: e.id), class: "btn-edit-category btn btn-warning" do %>
+      <%= t(".view") %>
+      <span class="glyphicon glyphicon-edit"></span>
+    <% end %>
+    </td>
+    <td>
+    <%= link_to admin_excercise_path(id: e.id), method: :delete,
+      data:{confirm: t(".sure")}, class: "btn btn-danger" do %>
+      <%= t(".delete") %>
+      <span class="glyphicon glyphicon-trash"></span>
+    <% end %>
+    </td>
+  </tr>
+<% end %>

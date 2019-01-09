@@ -1,12 +1,12 @@
 <tr>
   <td><%= excercise.created_at %></td>
   <td><%= excercise.lesson.name %></td>
-  <td><%= excercise.lesson.number_questions %></td>
-  <td><%= excercise.status %></td>
-  <td><%= excercise.result %></td>
+  <td><%= excercise.questions.count %></td>
   <% if excercise.result.blank? %>
+    <td><%= excercise.result %></td>
     <td><%= link_to t(".start"), edit_lesson_excercise_path(excercise.lesson.id, excercise), class: "btn btn-success" %></td>
   <% else %>
+    <td><%= excercise.result %> / <%= excercise.questions.count %></td>
     <td><%= link_to t(".view"), excercise_path(excercise.id), class: "btn btn-info" %></td>
   <% end%>
 </tr>

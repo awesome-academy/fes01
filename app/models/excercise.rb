@@ -5,5 +5,7 @@ class Excercise < ApplicationRecord
   has_many :questions, through: :detail_excercises
   accepts_nested_attributes_for :detail_excercises
 
-  scope :sort_by_created, ->{order created_at: :DESC}
+  scope :sort_by_updated, ->{order updated_at: :DESC}
+  scope :search_name_lesson,
+    ->(search){joins(:lesson).where("lessons.name LIKE ?", "%#{search}%")}
 end

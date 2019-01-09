@@ -11,11 +11,13 @@ Rails.application.routes.draw do
   resources :lessons do
     resources :excercises, only: :edit
   end
+  resources :searches
 
   namespace :admin do
     root "statistics#index"
     resources :questions
     resources :statistics
     resources :csv, only: :create
+    resources :excercises
   end
 end

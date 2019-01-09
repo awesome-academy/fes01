@@ -7,7 +7,10 @@ sessions:
   value_remember: "1"
 excercises:
   randum_numer : 2
+  pag_max: 10
 questions:
   pag_max: 10
   format_csv: "csv"
   format_xls: "xls"
+searches:
+  status: 200

@@ -7,7 +7,7 @@
     <ol>
       <%= form.fields_for :detail_excercises do |question_build| %>
         <li>
-          <strong><%= question_build.object.question.content %></strong>
+          <strong class="questions"><%= question_build.object.question.content %></strong>
           <%= question_build.hidden_field :question_id %>
           <%= question_build.collection_radio_buttons(:answer_id, question_build.object.question.answers, :id, :content) %>
         </li>

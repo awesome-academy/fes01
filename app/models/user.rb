@@ -19,6 +19,8 @@ class User < ApplicationRecord
   has_many :passive_relationships, class_name: Relationship.name,
     foreign_key: :followed_id, dependent: :destroy
 
+  scope :sort_by_created, ->{order created_at: :DESC}
+
   class << self
     def digest string
       cost = if ActiveModel::SecurePassword.min_cost

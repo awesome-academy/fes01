@@ -59,6 +59,7 @@ en:
       status: "Status"
       result: "Result"
       new_btn: "New excercise"
+      search: "Search"
     edit:
       submit: "Finish"
     update:
@@ -67,6 +68,37 @@ en:
     csv:
       create:
         note_import: "Question imported"
+    excercises:
+      index:
+        title: "Management excercises"
+        id: "Id"
+        lesson_id: "Lesson id"
+        user_id: "User id"
+        question_number: "Question number"
+        result: "Result"
+        created_at: "Created at"
+        action: "Actions"
+        add_excercise: "Add excercise"
+        table_excercises: Table excercises
+        search: "Search"
+      excercises:
+        view: "View"
+        delete: "Delete"
+        sure: "Are you sure?"
+      load_excercise:
+        not_found: "Excercise not found"
+      edit:
+        title: "Edit excercise"
+        back: "Back"
+        btn_save: "Save"
+      new:
+        title: "New excercise"
+        create: "Create excercise"
+        add: "Add"
+        back: "Back"
+      destroy:
+        destroy_success: "Destroy sucsess"
+        destroy_fail: "Destroy fail"
     statistics:
       index:
         title: "Statistics exercises"
@@ -174,6 +206,9 @@ en:
         phone: "Phone"
         password: "Password"
         password_confirmation: "Confirmation"
+      excercise:
+        select_lesson: "Select lesson:"
+        select_user: "Select user:"
     placeholder:
       session:
         email: "Email"

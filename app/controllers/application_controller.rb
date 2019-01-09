@@ -12,4 +12,9 @@ class ApplicationController < ActionController::Base
   def admin_user
     redirect_to root_path unless current_user.admin?
   end
+
+  def load_questions lesson_id
+    rand_questons = Question.all_questons(lesson_id).order("RAND()")
+    @questions = rand_questons.limit(Settings.excercises.randum_numer)
+  end
 end

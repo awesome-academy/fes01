@@ -1285,9 +1285,6 @@ address  a {
 address  a:hover {
 	color: #bfe7cd;
 }
-.more-address b, strong{
-  color: #bfe7cd!important;
-}
 .more-address{
   padding: 1em 0;
 }
