@@ -1,5 +1,5 @@
 class ExcercisesController < ApplicationController
-  before_action :logged_in_user
+  before_action :authenticate_user!
   before_action :load_lessons, only: [:new, :create]
   before_action :load_excercise, :load_answer_correct, only: [:edit,
     :show, :update]

@@ -23,10 +23,11 @@
   margin-top:4%;
 }
 .account-bottom {
+  width: 50%;
+  margin-left: 25%;
   margin-top: 2.2em;
 }
-.account-left input[type="text"],.account-left input[type="password"] {
-  width: 90%;
+.account-left input[type="email"], .account-left input[type="text"], .account-left input[type="password"] {
   margin: 0px;
   color: #000;
   background: none;
@@ -85,4 +86,11 @@ table-user-information, tbody, tr {
 .account-box {
   width: 100px;
   float: left;
+}
+input#user_remember_me {
+  width: 30px;
+}
+.section-link-regist {
+  margin: 10px;
+  font-size: 17px;
 }
