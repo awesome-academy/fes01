@@ -3,13 +3,12 @@
   <div class="activity">
     <%= link_to activity.owner.name, activity.owner if activity.owner %>
     <% case activity.key %>
-        <% when "excercise.create" %>
-          <%= t(".start_excercise_html", lesson: link_to(activity.trackable.lesson.name, activity.trackable.lesson)) %>
-        <% when "excercise.update" %>
-          <%= t(".start_excercise_html", lesson: link_to(activity.trackable.lesson.name, activity.trackable.lesson)) %>
-        <% when "relationship.create" %>
-          <%= t(".start_follow_html", user: link_to(find_user(activity.trackable.followed_id), "#")) %>
-
+      <% when "excercise.create" %>
+        <%= t(".create_excercise_html", lesson: link_to(activity.trackable.lesson.name, activity.trackable.lesson)) %>
+      <% when "excercise.update" %>
+        <%= t(".start_excercise_html", lesson: link_to(activity.trackable.lesson.name, activity.trackable.lesson)) %>
+      <% when "relationship.create" %>
+        <%= t(".start_follow_html", user: link_to(find_user(activity.trackable.followed_id), "#")) %>
     <% end %>
   </div>
 <% end %>

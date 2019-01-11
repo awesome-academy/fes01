@@ -9,7 +9,7 @@
         <h1>
           <%= @user.name %>
         </h1>
-        <% if current_user == @user %>
+        <% if can? :update, @user %>
           <div class= "account_link">
             <%= link_to t(".edit"), "#"  %>
           </div>
