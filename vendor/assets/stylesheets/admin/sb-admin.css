@@ -619,3 +619,6 @@ footer.sticky-footer {
 .list-questions {
   margin: 10px;
 }
+.cell_custom a {
+    color: white;
+}

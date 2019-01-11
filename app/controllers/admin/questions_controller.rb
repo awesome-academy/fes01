@@ -19,8 +19,8 @@ class Admin::QuestionsController < AdminController
   end
 
   def index
-    @search_questions = Question.sort_by_created.search_content(params[:search])
-    @questions = @search_questions.paginate page: params[:page],
+    @q = Question.sort_by_created.ransack(params[:q])
+    @questions = @q.result.paginate page: params[:page],
       per_page: Settings.questions.pag_max
     respond_to do |format|
       format.html
