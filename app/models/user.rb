@@ -1,6 +1,9 @@
 class User < ApplicationRecord
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-  attr_accessor :remember_token
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
+  devise :database_authenticatable, :registerable,
+    :recoverable, :rememberable, :validatable
   before_save{email.downcase!}
   validates :email, presence: true,
     length: {maximum: Settings.user.email_length},
@@ -9,7 +12,6 @@ class User < ApplicationRecord
   validates :password, presence: true,
     length: {minimum: Settings.user.password_length}
   enum role: {admin: 1, subscriber: 0}
-  has_secure_password
   has_many :activities, dependent: :destroy
   has_many :active_relationships, class_name: Relationship.name,
     foreign_key: :follower_id, dependent: :destroy
@@ -20,33 +22,4 @@ class User < ApplicationRecord
     foreign_key: :followed_id, dependent: :destroy
 
   scope :sort_by_created, ->{order created_at: :DESC}
-
-  class << self
-    def digest string
-      cost = if ActiveModel::SecurePassword.min_cost
-               BCrypt::Engine::MIN_COST
-             else
-               BCrypt::Engine.cost
-             end
-      BCrypt::Password.create(string, cost: cost)
-    end
-
-    def new_token
-      SecureRandom.urlsafe_base64
-    end
-  end
-
-  def remember
-    self.remember_token = User.new_token
-    update_attribute :remember_digest, User.digest(remember_token)
-  end
-
-  def authenticated? remember_token
-    return false if remember_digest.nil?
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
-  end
-
-  def forget
-    update_attribute :remember_digest, nil
-  end
 end
