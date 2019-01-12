@@ -30,6 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  relationship:
+    load_relationship:
+      error_message: "Not found relationship"
+    load_user:
+      error_message: "Not found user"
   activerecord:
     errors:
       models:
@@ -220,11 +225,24 @@ en:
         password: "Password"
         password_confirmation: "Confirmation"
   shared:
+    stats:
+      following: "following"
+      followers: "followers"
     form_error: "The form contains %{count_err}."
     error:
       one: "%{count} error"
       other: "%{count} errors"
   users:
+    following:
+      title: "Following"
+    followers:
+      title: "Followers"
+    show_follow:
+      profile: "View my profile"
+    follow:
+      follow: "Follow"
+    unfollow:
+      unfollow: "Unfollow"
     logged_in_user:
       pl_login: "Please login"
     load_user:
@@ -239,3 +257,4 @@ en:
       email: "Email"
       name: "Name"
       phone: "Phone"
+      edit: "Edit profile"

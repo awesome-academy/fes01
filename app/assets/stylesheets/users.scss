@@ -1,6 +1,14 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+$black: #000;
+$light_blue: #73b6e1;
+$grey: #666;
+$white: #FFF;
+$light-grey: #ddd;
+$grey2: #dbdbdb;
+$light: #eeeeee;
+
 /*--account-starts--*/
 .register {
   margin-top: 10%;
@@ -12,7 +20,7 @@
 }
 .account-left h3 {
   font-size: 1.7em;
-  color: #73b6e1;
+  color: $light_blue;
   margin: 0 0 0 0;
   font-family: 'BreeSerif-Regular';
 }
@@ -29,11 +37,11 @@
 }
 .account-left input[type="email"], .account-left input[type="text"], .account-left input[type="password"] {
   margin: 0px;
-  color: #000;
+  color: $black;
   background: none;
   padding: 8px 10px;
   outline: none;
-  border: 1px solid #000;
+  border: 1px solid $black;
   font-family: 'Lato-Regular';
   font-size: 14px;
   margin-bottom:20px;
@@ -49,14 +57,14 @@
 }
 .address a {
   font-size: 14px;
-  color: #666;
+  color: $grey;
   font-weight: 500;
   font-family: 'Lato-Regular';
   margin-right: 20px;
 }
 .address input[type="submit"] {
-  background: #73B6E1;
-  color: #FFF;
+  background: $light_blue;
+  color: $white;
   font-size: 1em;
   padding: 0.5em 1.2em;
   transition: 0.5s all;
@@ -70,7 +78,7 @@
   font-family: 'Lato-Regular';
 }
 .address input[type="submit"]:hover {
-  background: #000;
+  background: $black;
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
@@ -81,7 +89,7 @@
   margin-bottom: 15%;
 }
 table-user-information, tbody, tr {
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid $light-grey;
 }
 .account-box {
   width: 100px;
@@ -93,4 +101,83 @@ input#user_remember_me {
 .section-link-regist {
   margin: 10px;
   font-size: 17px;
+}
+
+.account-gravatar {
+  float: left;
+  margin-right: 50px;
+  display: block;
+  .gravatar {
+    border-radius: 50%;
+  }
+}
+.account_link {
+  background-color: transparent;
+  border: 1px solid $grey2;
+  color:  ;
+  width: 80px;
+  padding: 5px;
+  display: inherit;
+  margin: 7px 20px;
+  a {
+    color: black;
+  }
+}
+.account-name {
+  display: inline-block;
+  h1 {
+    float: left;
+  }
+}
+.account.show {
+  margin-left: 35%;
+}
+.stats {
+  overflow: auto;
+  margin-top: 0;
+  padding: 0;
+  a {
+    float: left;
+    padding: 0 10px;
+    border-left: 1px solid $gray-lighter;
+    color: gray;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: blue;
+    }
+  }
+  strong {
+    display: block;
+  }
+}
+.user_avatars {
+  overflow: auto;
+  margin-top: 10px;
+  .gravatar {
+    margin: 1px 1px;
+  }
+  a {
+    padding: 0;
+  }
+}
+
+.users.follow {
+  padding: 0;
+}
+#follow_form {
+  width: 80px;
+  margin-left: 13%;
+  margin-top: 15px;
+}
+.users li {
+  overflow: auto;
+  padding: 10px 0;
+  border-bottom: 1px solid $light;
+}
+.row.folowing-user {
+  margin: 30px;
 }
