@@ -8,6 +8,9 @@ $white: #FFF;
 $light-grey: #ddd;
 $grey2: #dbdbdb;
 $light: #eeeeee;
+$black2: #262626;
+$grey3: #CCC;
+$grey4: #777;
 
 /*--account-starts--*/
 .register {
@@ -102,7 +105,6 @@ input#user_remember_me {
   margin: 10px;
   font-size: 17px;
 }
-
 .account-gravatar {
   float: left;
   margin-right: 50px;
@@ -114,7 +116,7 @@ input#user_remember_me {
 .account_link {
   background-color: transparent;
   border: 1px solid $grey2;
-  color:  ;
+  color: $black2;
   width: 80px;
   padding: 5px;
   display: inherit;
@@ -180,4 +182,13 @@ input#user_remember_me {
 }
 .row.folowing-user {
   margin: 30px;
+}
+.activity {
+  border-bottom:  solid 1px $grey3;
+  padding: 16px 0;
+  em {
+    color: $grey4;
+    font-size: 12px;
+    padding-left: 5px;
+  }
 }

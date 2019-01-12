@@ -7,6 +7,8 @@ Rails.application.routes.draw do
       get :following, :followers
     end
   end
+
+  resources :activities
   resources :excercises
   resources :lessons do
     resources :excercises, only: :edit

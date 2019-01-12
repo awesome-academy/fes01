@@ -7,4 +7,9 @@ module ApplicationHelper
       page_title + " | " + base_title
     end
   end
+
+  def find_user id
+    @user = User.find_by id: id
+    @user.present? ? @user.name : id
+  end
 end
