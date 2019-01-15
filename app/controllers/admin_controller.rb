@@ -3,5 +3,5 @@ class AdminController < ApplicationController
   before_action :authenticate_user!, :admin_user
 
   include Admin::ExcercisesHelper
-  include ExcercisesHelper
+  include zyxxxx
 end
