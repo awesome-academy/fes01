@@ -14,6 +14,9 @@ class RelationshipsController < ApplicationController
   def destroy
     @user = @relationship.followed
     current_user.unfollow @user
+    @activity = PublicActivity::Activity.find_by trackable_id: params[:id],
+      trackable_type: controller_path.classify
+    @activity.destroy
     respond_to do |format|
       format.html{redirect_to @user}
       format.js

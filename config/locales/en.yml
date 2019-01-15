@@ -35,6 +35,12 @@ en:
       error_message: "Not found relationship"
     load_user:
       error_message: "Not found user"
+  activities:
+    index:
+      activities: "Activities"
+      start_excercise_html: "started a excercise of %{lesson}"
+      create_excercise_html: "created a excercise of %{lesson}"
+      start_follow_html: "started follow %{user}"
   activerecord:
     errors:
       models:
@@ -181,6 +187,7 @@ en:
       home: "Home"
       category: "Categories"
       words: "Words"
+      activities: "Activities"
       login: "LOG IN"
       signup: "SIGN UP"
       admin_page: "Admin page"
