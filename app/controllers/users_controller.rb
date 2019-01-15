@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :load_user, only: :show
+  before_action :load_user, only: [:show, :following, :followers]
 
   def new
     @user = User.new
@@ -17,6 +17,20 @@ class UsersController < ApplicationController
   end
 
   def show; end
+
+  def following
+    @title = t ".title"
+    @users = @user.following.paginate page: params[:page],
+      per_page: Settings.user.per_pag
+    render :show_follow
+  end
+
+  def followers
+    @title = t ".title"
+    @users = @user.followers.paginate page: params[:page],
+      per_page: Settings.user.per_pag
+    render :show_follow
+  end
 
   private
 
