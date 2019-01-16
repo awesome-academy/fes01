@@ -12,6 +12,11 @@ class ApplicationController < ActionController::Base
     @questions = rand_questons.limit(Settings.excercises.randum_numer)
   end
 
+  rescue_from CanCan::AccessDenied do |_exception|
+    flash[:warning] = t "auth_error"
+    redirect_to root_path
+  end
+
   protected
 
   def configure_permitted_parameters
