@@ -27,9 +27,9 @@ class ExcercisesController < ApplicationController
 
   def index
     @excercises = current_user.excercises.sort_by_updated
-
-    @excercises = if params[:search].present?
-                    @excercises.search_name_lesson(params[:search])
+    @search = @excercises.ransack params[:q]
+    @excercises = if params[:q].present?
+                    @excercises = @search.result
                   else
                     @excercises
                   end.paginate page: params[:page],

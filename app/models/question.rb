@@ -4,10 +4,7 @@ class Question < ApplicationRecord
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc{|attributes| attributes["content"].blank?}
 
-  scope :all_questons, ->(lesson_id){where lesson_id: lesson_id}
   scope :sort_by_created, ->{order created_at: :DESC}
-  scope :search_content,
-    ->(search){where("content LIKE ?", "%#{search}%") if search.present?}
 
   def self.to_csv options = {}
     CSV.generate(options) do |csv|

@@ -1,8 +1,8 @@
 <div class="new-excercise">
   <%= link_to t(".new_btn"), new_excercise_path, class: "btn btn-lg btn-primary", id: "new_link", remote: true %>
   <div class="search-bar-excercise">
-    <%= form_tag "#", method: :get do %>
-      <%= text_field_tag :search, params[:search], id: "search-exc", class: "search-excercise", placeholder: t(".search") %>
+    <%= search_form_for @search do |f| %>
+      <%= f.text_field :lesson_name_cont, id: "search-exc", class: "search-excercise", placeholder: t(".search") %>
     <% end %>
   </div>
 </div>
@@ -15,7 +15,7 @@
         <thead>
           <tr>
             <th><%= t ".date" %></th>
-            <th><%= t ".lesson" %></th>
+            <th><%= sort_link @search, :lesson_name, t(".lesson") %></th>
             <th><%= t ".question_number" %></th>
             <th><%= t ".result" %></th>
             <th></th>

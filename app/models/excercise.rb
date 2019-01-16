@@ -9,6 +9,4 @@ class Excercise < ApplicationRecord
   accepts_nested_attributes_for :detail_excercises
 
   scope :sort_by_updated, ->{order updated_at: :DESC}
-  scope :search_name_lesson,
-    ->(search){joins(:lesson).where("lessons.name LIKE ?", "%#{search}%")}
 end

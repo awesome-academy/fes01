@@ -124,7 +124,8 @@ en:
         action: "Actions"
         add_question: "Add question"
         table_questions: Table questions
-        search: "Search"
+        search: "Question content or lesson name"
+        btn_search: "Search"
         csv: "CSV"
         download: "Download:"
         excel: "Excel"

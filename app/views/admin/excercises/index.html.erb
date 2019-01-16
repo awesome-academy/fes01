@@ -9,8 +9,8 @@
       <div class="table-responsive">
         <div class="add_pd">
           <div class="search-bar">
-            <%= form_tag admin_excercises_path, method: :get do %>
-              <%= text_field_tag :search, params[:search], placeholder: t(".search") %>
+            <%= search_form_for @search, url: admin_excercises_path  do |f| %>
+              <%= f.text_field :lesson_name_start, id: "search-exc", placeholder: t(".search") %>
               <%= submit_tag t(".search"), class: "form_submit" %>
             <% end %>
           </div>
@@ -19,11 +19,11 @@
           <thead>
             <tr class="row_custom header">
               <th class="cell_custom"><%= t(".id") %></th>
-              <th class="cell_custom"><%= t(".lesson_id") %></th>
+              <th class="cell_custom"><%= sort_link @search, :lesson_id, t(".lesson_id") %></th>
               <th class="cell_custom"><%= t(".user_id") %></th>
               <th class="cell_custom"><%= t(".question_number") %></th>
               <th class="cell_custom"><%= t(".result") %></th>
-              <th class="cell_custom"><%= t(".created_at") %></th>
+              <th class="cell_custom"><%= sort_link @search, :created_at, t(".created_at") %></th>
               <th colspan="2", class="cell_custom"><%= t(".action") %></th>
             </tr>
           </thead>
