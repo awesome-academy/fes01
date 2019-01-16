@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_questions lesson_id
-    rand_questons = Question.all_questons(lesson_id).order("RAND()")
+    rand_questons = Question.all_questons_by_lesson(lesson_id).order("RAND()")
     @questions = rand_questons.limit(Settings.excercises.randum_numer)
   end
 
