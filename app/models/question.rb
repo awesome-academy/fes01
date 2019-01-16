@@ -1,9 +1,11 @@
 class Question < ApplicationRecord
+  acts_as_paranoid
   belongs_to :lesson
   has_many :answers, dependent: :destroy, inverse_of: :question
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc{|attributes| attributes["content"].blank?}
 
+  scope :all_questons_by_lesson, ->(lesson_id){where lesson_id: lesson_id}
   scope :sort_by_created, ->{order created_at: :DESC}
 
   def self.to_csv options = {}
