@@ -55,6 +55,12 @@ group :test do
   gem "minitest", "5.10.3"
   gem "minitest-reporters", "1.1.14"
   gem "rails-controller-testing", "1.0.2"
+  gem "rspec-rails", "~> 3.5"
+  gem "database_cleaner"
+  gem "capybara"
+  gem "factory_girl_rails"
+  gem "rspec-activemodel-mocks"
+  gem "shoulda-matchers"
 end
 
 group :production do
